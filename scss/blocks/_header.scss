@@ -1,0 +1,89 @@
+.header {
+    background-color: $black-color;
+
+    &__opacity {
+        transition: .3s;
+    }
+
+    &__opacity:hover {
+        opacity: .6;
+    }
+
+    &__navigation {
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: #ffffff;
+        margin-top:23px;
+        min-width: 232px;
+        min-height: 764px;
+        padding: 0 34px 0 34px;
+    }
+
+    &__navigation-close {
+        position: absolute;
+        right: 0;
+        margin: 16px 16px 0 0;
+    }
+
+    &__navigation-title {
+        margin: 37px 0 24px 0;
+        font-size: 14px;
+        line-height: 17px;
+        font-weight: 900;
+        color: $black-color;
+        text-transform: uppercase;
+    }
+
+    .navigation-item {
+
+        &__link {
+            font-size: 14px;
+            line-height: 17px;
+            font-weight: 700;
+            color: $pink-color;
+            text-transform: uppercase;
+            padding: 20px 0 0 0;
+        }
+
+        &__sublist {
+            padding: 12px 0 9px 0;
+        }
+
+        &__sublist-link {
+            font-size: 14px;
+            line-height: 17px;
+            font-weight: 400;
+            color:$gray-color;
+            display: inline-block;
+            margin: 0px 0 11px 20px;
+        }
+
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        min-height: 75px;
+        align-items: center;
+    }
+
+    &__logo {
+        margin: 0 41px 0 0px;
+    }
+
+    &__menu-button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    &__menu-button:focus,
+    &__menu-button:active {
+        outline: none;
+    }
+
+    &__link {
+        margin: 0 0 0 33px;
+    }
+}

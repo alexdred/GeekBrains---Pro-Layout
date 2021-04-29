@@ -1,0 +1,33 @@
+.advantages {
+    background-color: $black-color;
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 0;
+    }
+
+    &__item {
+        width: 360px;
+        text-align: center;
+        color: #ffffff;
+        margin: 100px 0;
+        padding: 0 25px;
+        // @extend %border;
+    }
+
+    &__item-heading {
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 400;
+        margin: 19px 0 16px 0;
+    }    
+
+    &__item-text {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+    }    
+
+}

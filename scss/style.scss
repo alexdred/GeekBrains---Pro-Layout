@@ -1,0 +1,56 @@
+/* ---------------------------------------------------------
+
+Template Name: Shop
+Description: Professional Layout - GeekBrains
+Author: Alex Romanenko
+Version: 1.0
+  
+A. Global
+B. Index
+    B.1 Header
+    B.2 Brand
+    B.3 Stocks
+    B.4 Products
+    B.5 Advantages
+    B.6 Footer
+C. Registration
+
+/* A. Global
+-----------------------------------------------------------*/
+
+@import './variables';
+@import './mixins';
+@import './reset';
+@import './general';
+
+/* B. Index
+-----------------------------------------------------------*/
+
+/* B.1 Header */
+
+@import './blocks/header';
+
+/* B.2 Brand */
+
+@import './blocks/brand';
+
+/* B.3 Stocks */
+
+@import './blocks/stocks';
+
+/* B.4 Productss */
+
+@import './blocks/products';
+
+/* B.5 Advantages */
+
+@import './blocks/advantages';
+
+/* B.6 Footer */
+
+@import './blocks/footer';
+
+/* C. Registration
+-----------------------------------------------------------*/
+
+@import './blocks/registration';

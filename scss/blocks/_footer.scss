@@ -1,0 +1,110 @@
+.footer {
+    margin: 0;
+    background-image: url(../img/main/footer-bg.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__wrap {
+        display: flex;
+        padding-top: 86px;
+        padding-bottom: 130px;
+    }
+
+    &__content {
+        text-align: center;
+        width: 50%;
+    }
+
+    &__testemonial {
+        font-style: italic;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        width: 350px;
+        margin: 0 auto;
+        margin-top:30px;
+    }
+
+    &__subscribe {
+        font-weight: 700;
+        font-size: 24px;
+        text-transform: uppercase;
+        margin-top: 50px;
+    }
+
+    &__subscribe-text {
+        font-weight: 400;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+
+    &__form {
+        font-family: inherit;
+        margin-top: 30px;
+    }
+
+    &__form-email {
+        padding: 15px 30px;
+        border: none;
+        background-color: rgb(228, 228, 228);
+        border-radius: 30px 0 0px 30px;
+    }
+
+    &__form-email:focus,
+    &__form-btn:focus,
+    &__form-email:active,
+    &__form-btn:active {
+        outline: none;
+    }
+
+    &__form-btn {
+        padding: 15px 30px;
+        border: none;
+        background-color: $pink-color;
+        border-radius: 0px 30px 30px 0px;
+        color: #ffffff;
+        margin-left: -3px;
+        cursor: pointer;
+    }
+
+    &__bottom {
+        background-color: $black-color;
+        display: flex;
+    }
+
+    &__bottom-wrap {
+        display: flex;
+        justify-content: space-between;
+        color:white;
+        align-items: center;
+        padding:20px 0;
+    }
+
+    &__bottom-text {
+        margin:1px 0 0 0;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    &__bottom-list {
+        display: flex;
+        margin: 0;
+    }
+
+    &__bottom-link {
+        margin:0 0 0 6px;
+        transition: .3s;
+        background-color: white;
+    }
+
+    &__bottom-link a{
+        display: block;
+        padding: 6px;
+    }
+
+    &__bottom-link:hover {
+        background-color: $pink-color;
+    }
+
+}
