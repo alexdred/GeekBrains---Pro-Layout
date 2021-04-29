@@ -2,4 +2,8 @@
     border:1px solid red;
 }
 
-// @include r-b()
+@mixin font($size: 14px, $weight: 300, $line-height: 17px) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line-height;
+}

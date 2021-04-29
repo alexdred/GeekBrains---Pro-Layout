@@ -1,10 +1,6 @@
 body {
-    margin:0;
-    padding:0;
     font-family: $main-font;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 17px;
+    @include font();
 }
 
 .visually-hidden {
@@ -27,7 +23,7 @@ body {
     background-color: $light-pink-color;
 }
 
-.title-wrapper h1{
+.title-wrapper h1 {
     text-transform: uppercase;
     color: $pink-color;
     font-size: 24px;

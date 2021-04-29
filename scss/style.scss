@@ -14,6 +14,7 @@ B. Index
     B.5 Advantages
     B.6 Footer
 C. Registration
+D. Cart
 
 /* A. Global
 -----------------------------------------------------------*/
@@ -54,3 +55,8 @@ C. Registration
 -----------------------------------------------------------*/
 
 @import './blocks/registration';
+
+/* D. Cart
+-----------------------------------------------------------*/
+
+@import './blocks/cart';

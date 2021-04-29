@@ -79,9 +79,8 @@
         margin: 0 20px 0 10px;
     }
 
-    & .radio-lable {
+    .radio-label {
         display: block;
-        position: relative;
         width: 17px;
         height: 17px;
     }
@@ -95,28 +94,34 @@
         padding-right: 100px;
     }
 
-    // & [type="radio"] {
-    //     display: none;
-    // }
+    input.radio-label{
+        appearance: none;
+    }
 
-    // & .radio-lable:before {
-    //     content:'';
-    //     width: 10px;
-    //     height: 10px;
-    //     border:1px solid red;
-    //     position: absolute;
-    //     left: -10px;
-    // }
+    .sex-label {
+        position: relative;
+    }
 
-    // & [type="radio"]:checked {
-    //     background-color: red;
-    // }
+    .sex-label::before {
+        content: '';
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        border:1px solid $light-gray-color;
+        border-radius: 17px;
+        position: absolute;
+        margin-left: -27px;
+    }
+
+    input[type="radio"]:checked+.sex-label::before {
+        background-color: $pink-color;
+    }
 
     &__label {
         visibility: hidden;
     }
 
-    & [type="submit"] {
+    [type="submit"] {
         font-size: 14px;
         line-height: 17px;
         font-weight: 400;
@@ -130,12 +135,12 @@
         cursor: pointer;
     }
 
-    & [type="submit"]:hover,
-    & [type="submit"]:focus {
+    [type="submit"]:hover,
+    [type="submit"]:focus {
         background: $black-color;
     }
 
-    & [type="submit"]:active {
+    [type="submit"]:active {
         opacity: 0.9;
     }
 
@@ -143,7 +148,7 @@
         margin: 0;
     }
 
-    &__btn-text::after{
+    &__btn-text::after {
         content:'';
         display: inline-block;
         width: 17px;
