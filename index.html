@@ -16,27 +16,20 @@
 
 <body>
 
-    <!-- 
-    block 
-    block__element
-    block__element-subelement
-
-    ..._modificator (уточнение стиял)
-
-    https://github.com/yoksel/common-words
-    -->
-
     <header class="header">
         <div class="header__wrapper container">
             <div>
-                <img class="header__logo" src="./img/main/logo.svg" alt="logo" width="44" height="38">
-                <img class="header__loupe" src="./img/main/loupe.svg" alt="loupe" width="26" height="27">
+                <a href="#"><img class="header__logo" src="./img/main/logo.svg" alt="logo" width="44" height="38"></a>
+                <a href="#" class="header__opacity"><img class="header__loupe" src="./img/main/loupe.svg" alt="loupe"
+                        width="26" height="27"></a>
             </div>
             <div>
-                <button class="header__menu-button" type="button"><img src="./img/main/burger.svg" alt="burger"
-                        width="32" height="23"></button>
-                <img class="header__link" src="./img/main/cart.svg" alt="cart" width="32" height="29">
-                <img class="header__link" src="./img/main/account.svg" alt="account" width="32" height="29">
+                <button class="header__menu-button header__opacity" type="button"><img src="./img/main/burger.svg"
+                        alt="burger" width="32" height="23"></button>
+                <a href="#" class="header__opacity"><img class="header__link" src="./img/main/cart.svg" alt="cart"
+                        width="32" height="29"></a>
+                <a href="registration.html" class="header__opacity"><img class="header__link"
+                        src="./img/main/account.svg" alt="account" width="32" height="29"></a>
                 <nav class="header__navigation">
                     <a class="header__navigation-close" href="#"><img src="./img/main/close.svg" alt="close"></a>
                     <h2 class="header__navigation-title">menu</h2>
@@ -115,86 +108,98 @@
             <p class="products__text">Shop for items based on what we featured in this week</p>
             <ul class="products__list">
                 <li class="products__item">
-                    <img class="products__item-image" src="./img/products/product-1.jpg" alt="product-1" width="360"
-                        height="420">
+                    <div class="products__item-wrap">
+                        <img class="products__item-image" src="./img/products/product-1.jpg" alt="product-1" width="360"
+                            height="420">
+                        <button class="products__item-button" type="button">
+                            <img class="products__item-button-img" src="./img/main/cart.svg" alt="cart" width="26"
+                                height="24">Add to Cart</button>
+                    </div>
                     <h3 class="products__item-heading">ellery x m'o capsule</h3>
                     <p class="products__item-text">Known for her sculptural takes on traditional tailoring, Australian
                         arbiter of cool Kym Ellery
                         teams up with Moda Operandi.</p>
                     <p class="products__item-price">$52.00</p>
-                    <button class="products__item-button" type="button">
-                        <img class="products__item-button-img" src="./img/main/cart.svg" alt="cart" width="26"
-                            height="24">Add to Cart</button>
                 </li>
                 <li class="products__item">
-                    <img class="products__item-image" src="./img/products/product-2.jpg" alt="product-2" width="360"
-                        height="420">
+                    <div class="products__item-wrap">
+                        <img class="products__item-image" src="./img/products/product-2.jpg" alt="product-2" width="360"
+                            height="420">
+                        <button class="products__item-button" type="button">
+                            <img class="products__item-button-img" src="./img/main/cart.svg" alt="cart" width="26"
+                                height="24">
+                            Add to Cart
+                        </button>
+                    </div>
                     <h3 class="products__item-heading">ellery x m'o capsule</h3>
                     <p class="products__item-text">Known for her sculptural takes on traditional tailoring, Australian
                         arbiter of cool Kym Ellery
                         teams up with Moda Operandi.</p>
                     <p class="products__item-price">$52.00</p>
-                    <button class="products__item-button" type="button">
-                        <img class="products__item-button-img" src="./img/main/cart.svg" alt="cart" width="26"
-                            height="24">
-                        <p>Add to Cart</p>
-                    </button>
                 </li>
                 <li class="products__item">
-                    <img class="products__item-image" src="./img/products/product-3.jpg" alt="product-3" width="360"
-                        height="420">
+                    <div class="products__item-wrap">
+                        <img class="products__item-image" src="./img/products/product-3.jpg" alt="product-3" width="360"
+                            height="420">
+                        <button class="products__item-button" type="button">
+                            <img class="products__item-button-img" src="./img/main/cart.svg" alt="cart" width="26"
+                                height="24">
+                            Add to Cart
+                        </button>
+                    </div>
                     <h3 class="products__item-heading">ellery x m'o capsule</h3>
                     <p class="products__item-text">Known for her sculptural takes on traditional tailoring, Australian
                         arbiter of cool Kym Ellery
                         teams up with Moda Operandi.</p>
                     <p class="products__item-price">$52.00</p>
-                    <button class="products__item-button" type="button">
-                        <img class="products__item-button-img" src="./img/main/cart.svg" alt="cart" width="26"
-                            height="24">
-                        <p>Add to Cart</p>
-                    </button>
                 </li>
                 <li class="products__item">
-                    <img class="products__item-image" src="./img/products/product-4.jpg" alt="product-4" width="360"
-                        height="420">
+                    <div class="products__item-wrap">
+                        <img class="products__item-image" src="./img/products/product-4.jpg" alt="product-4" width="360"
+                            height="420">
+                        <button class="products__item-button" type="button">
+                            <img class="products__item-button-img" src="./img/main/cart.svg" alt="cart" width="26"
+                                height="24">
+                            Add to Cart
+                        </button>
+                    </div>
                     <h3 class="products__item-heading">ellery x m'o capsule</h3>
                     <p class="products__item-text">Known for her sculptural takes on traditional tailoring, Australian
                         arbiter of cool Kym Ellery
                         teams up with Moda Operandi.</p>
                     <p class="products__item-price">$52.00</p>
-                    <button class="products__item-button" type="button">
-                        <img class="products__item-button-img" src="./img/main/cart.svg" alt="cart" width="26"
-                            height="24">
-                        <p>Add to Cart</p>
-                    </button>
                 </li>
                 <li class="products__item">
-                    <img class="products__item-image" src="./img/products/product-5.jpg" alt="product-5" width="360"
-                        height="420">
+                    <div class="products__item-wrap">
+                        <img class="products__item-image" src="./img/products/product-5.jpg" alt="product-5" width="360"
+                            height="420">
+                        <button class="products__item-button" type="button">
+                            <img class="products__item-button-img" src="./img/main/cart.svg" alt="cart" width="26"
+                                height="24">
+                            Add to Cart
+                        </button>
+                    </div>
                     <h3 class="products__item-heading">ellery x m'o capsule</h3>
                     <p class="products__item-text">Known for her sculptural takes on traditional tailoring, Australian
                         arbiter of cool Kym Ellery
                         teams up with Moda Operandi.</p>
                     <p class="products__item-price">$52.00</p>
-                    <button class="products__item-button" type="button">
-                        <img class="products__item-button-img" src="./img/main/cart.svg" alt="cart" width="26"
-                            height="24">
-                        <p>Add to Cart</p>
-                    </button>
                 </li>
                 <li class="products__item">
-                    <img class="products__item-image" src="./img/products/product-6.jpg" alt="product-6" width="360"
-                        height="420">
+                    <div class="products__item-wrap">
+                        <img class="products__item-image" src="./img/products/product-6.jpg" alt="product-6" width="360"
+                            height="420">
+                        <button class="products__item-button" type="button">
+                            <img class="products__item-button-img" src="./img/main/cart.svg" alt="cart" width="26"
+                                height="24">
+                            Add to Cart
+                        </button>
+                    </div>
                     <h3 class="products__item-heading">ellery x m'o capsule</h3>
                     <p class="products__item-text">Known for her sculptural takes on traditional tailoring, Australian
                         arbiter of cool Kym Ellery
                         teams up with Moda Operandi.</p>
                     <p class="products__item-price">$52.00</p>
-                    <button class="products__item-button" type="button">
-                        <img class="products__item-button-img" src="./img/main/cart.svg" alt="cart" width="26"
-                            height="24">
-                        <p>Add to Cart</p>
-                    </button>
                 </li>
             </ul>
             <a class="products__browse" href="#">Browse All Product</a>
@@ -239,27 +244,42 @@
         </section>
     </main>
 
-    <footer class="visually-hidden">
-        <div>
-            <img src="./img/main/footer-woman.png" alt="footer-woman" width="96" height="96">
-            <p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum“</p>
+    <footer class="footer">
+        <div class="container footer__wrap">
+            <div class="footer__content">
+                <img src="./img/main/footer-woman.png" alt="footer-woman" width="96" height="96">
+                <p class="footer__testemonial">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus
+                    condimentum“</p>
+            </div>
+            <div class="footer__content">
+                <p class="footer__subscribe">subscribe</p>
+                <p class="footer__subscribe-text">for our newletter and promotion</p>
+                <form class="footer__form" action="endpoint">
+                    <input class="footer__form-email" type="email" placeholder="Enter Yout Email" required>
+                    <button class="footer__form-btn" type="submit">Subscribe</button>
+                </form>
+            </div>
         </div>
-        <div>
-            <p>subscribe</p>
-            <p>for our newletter and promotion</p>
-            <form action=""></form>
-        </div>
-        <div>
-            <p>© 2021 Brand All Rights Reserved.</p>
-            <ul>
-                <li><img src="./img/main/fb.svg" alt="facebook" width="32" height="32"></li>
-                <li><img src="./img/main/twit.svg" alt="twitter" width="32" height="32"></li>
-                <li><img src="./img/main/pint.svg" alt="pinterest" width="32" height="32"></li>
-                <li><img src="./img/main/inst.svg" alt="instagram" width="32" height="32"></li>
-            </ul>
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-wrap">
+                    <p class="footer__bottom-text">© 2021 Brand All Rights Reserved.</p>
+                    <ul class="footer__bottom-list">
+                        <li class="footer__bottom-link"><a href="#"><img src="./img/main/fb.svg" alt="facebook"
+                                    width="20" height="20"></a></li>
+                        <li class="footer__bottom-link"><a href="#"><img src="./img/main/twit.svg" alt="twitter"
+                                    width="20" height="20"></a></li>
+                        <li class="footer__bottom-link"><a href="#"><img src="./img/main/pint.svg" alt="pinterest"
+                                    width="20" height="20"></a></li>
+                        <li class="footer__bottom-link"><a href="#"><img src="./img/main/inst.svg" alt="instagram"
+                                    width="20" height="20"></a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <script src="js/init.js"></script>
     <script src="js/main.js"></script>
 
 </body>
