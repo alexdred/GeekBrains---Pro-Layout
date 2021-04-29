@@ -656,6 +656,10 @@ body {
     //     background-color: red;
     // }
 
+    &__label {
+        visibility: hidden;
+    }
+
     & [type="submit"] {
         font-size: 14px;
         line-height: 17px;

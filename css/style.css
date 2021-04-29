@@ -679,6 +679,10 @@ body {
   padding-right: 100px;
 }
 
+.registration__label {
+  visibility: hidden;
+}
+
 .registration [type="submit"] {
   font-size: 14px;
   line-height: 17px;
