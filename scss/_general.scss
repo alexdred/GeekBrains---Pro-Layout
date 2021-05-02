@@ -1,0 +1,32 @@
+body {
+    font-family: $main-font;
+    @include font();
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0)
+}
+
+.container {
+    width: 1140;
+    margin: 0 auto;
+}
+
+.title-wrapper{
+    background-color: $light-pink-color;
+}
+
+.title-wrapper h1 {
+    text-transform: uppercase;
+    color: $pink-color;
+    font-size: 24px;
+    font-weight: 400;
+    padding:60px 0;
+}

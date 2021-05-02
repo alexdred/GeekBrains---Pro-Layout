@@ -1,0 +1,199 @@
+.cart {
+    display: flex;
+    padding: 96px 0 128px 0;
+
+    &__products {
+        width: 750px;
+    }
+
+    &__list {
+        margin-bottom: 72px;
+    }
+
+    &__product,
+    &__products-buttons {
+        width: 652px;
+    }
+
+    &__product {
+        display: flex;
+        position: relative;
+        margin-bottom: 40px;
+        -moz-box-shadow: 5px 5px 10px #ccc;
+        -webkit-box-shadow: 5px 5px 10px #ccc;
+        box-shadow: 5px 5px 10px #ccc;
+    }
+
+    &__product-img {
+        width: 262px;
+        height: 306px;
+    }
+
+    &__product-text {
+        padding: 22px 100px 22px 31px;
+    }
+
+    &__product-heading {
+        @include font(24px, 400, 29px);
+        text-transform: uppercase;
+        margin-bottom: 42px;
+    }
+
+    &__product-price,
+    &__product-color,
+    &__product-size,
+    &__product-quantity {
+        @include font(22px, 400, 26px);
+        color: $gray-color;
+        margin-bottom: 6px;
+    }
+
+    &__product-number {
+        color: $pink-color;
+    }
+
+    &__product-qnumb {
+        border: 1px solid $light-gray-color;
+        padding: 0 15px;
+    }
+
+    &__product-close {
+        position: absolute;
+        right: 28px;
+        top: 22px;
+        width: 18px;
+        height: 18px;
+    }
+
+    &__products-buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__products-button {
+        display: inline-block;
+        border: 1px solid $gray-color;
+        padding: 15px 40px;
+        color: $gray-color;
+        @include font(14px, 300, 17px);
+        text-transform: uppercase;
+        transition: .3s;
+    }
+
+    &__products-button:hover {
+        border: 1px solid $pink-color;
+        color: #ffffff;
+        background-color: $pink-color;
+        text-decoration: none;
+    }
+
+    &__info {
+        flex-grow: 1;
+    }
+
+    &__adress-heading {
+        @include font(16px, 300, 19px);
+        text-transform: uppercase;
+        margin-bottom: 0;
+    }
+
+    &__adress-form {
+        margin-bottom: 57px;
+    }
+
+    &__adress-label {
+        visibility: hidden;
+    }
+
+    &__adress-input {
+        display: block;
+        padding: 15px;
+        border: 1px solid $light-gray-color;
+        width: 100%;
+        outline: none;
+    }
+
+    &__adress-input:focus,
+    &__adress-input:active {
+        outline: none;
+        border: 1px solid $pink-color;
+    }
+
+    &__adress-input::placeholder {
+        color: $light-gray-color;
+    }
+
+    &__adress-quote {
+        display: inline-block;
+        border: 1px solid $gray-color;
+        padding: 10px 15px;
+        color: $gray-color;
+        @include font(14px, 300, 17px);
+        text-transform: uppercase;
+        background-color: #ffffff;
+        transition: .3s;
+        margin-top: 24px;
+        cursor: pointer;
+    }
+
+    &__adress-quote:hover {
+        border: 1px solid $light-gray-color;
+        color: #ffffff;
+        background-color: $light-gray-color;
+        text-decoration: none;
+    }
+
+    &__proceed-wrapper {
+        background-color: #f5f3f3;
+        padding: 40px;
+    }
+
+    &__proceed-numbers {
+        border-bottom: 1px solid #e2e2e2;
+        text-align: right;
+    }
+
+    &__proceed-sub {
+        @include font(11px, 400, 13px);
+        text-transform: uppercase;
+    }
+
+    &__proceed-grand {
+        @include font(16px, 400, 19px);
+        text-transform: uppercase;
+        margin-bottom: 25px;
+    }
+
+    &__proceed-sub-numb {
+        display: inline-block;
+        margin-left: 25px;
+    }
+
+    &__proceed-grand-numb {
+        color: $pink-color;
+        font-weight: 700;
+        display: inline-block;
+        margin-left: 25px;
+    }
+
+    &__proceed {
+        display: inline-block;
+        border: 1px solid $pink-color;
+        padding: 15px;
+        color: #ffffff;
+        @include font(16px, 300, 19px);
+        text-transform: uppercase;
+        background-color: $pink-color;
+        transition: .3s;
+        margin-top: 24px;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    &__proceed:hover {
+        border: 1px solid $black-color;
+        color: #ffffff;
+        background-color: $black-color;
+        text-decoration: none;
+    }
+}

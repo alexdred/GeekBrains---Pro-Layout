@@ -23,10 +23,10 @@
             <div>
                 <button class="header__menu-button header__opacity" type="button"><img src="./img/main/burger.svg"
                         alt="burger" width="32" height="23"></button>
-                <a href="#" class="header__opacity"><img class="header__link" src="./img/main/cart.svg" alt="cart"
-                        width="32" height="29"></a>
-                <a href="#" class="header__opacity"><img class="header__link" src="./img/main/account.svg" alt="account"
-                        width="32" height="29"></a>
+                <a href="cart.html" class="header__opacity"><img class="header__link" src="./img/main/cart.svg"
+                        alt="cart" width="32" height="29"></a>
+                <a href="registration.html" class="header__opacity"><img class="header__link"
+                        src="./img/main/account.svg" alt="account" width="32" height="29"></a>
                 <nav class="header__navigation">
                     <a class="header__navigation-close" href="#"><img src="./img/main/close.svg" alt="close"></a>
                     <h2 class="header__navigation-title">menu</h2>
@@ -68,46 +68,66 @@
     </header>
 
     <main>
-        <section>
-            <h1>shopping cart</h1>
-        </section>
-        <div>
-            <ul>
-                <li>
-                    <img src="./img/products/product-1.jpg" alt="product-1" width="262" height="360">
-                    <h2>mango people t-shirt</h2>
-                    <p>Price: $300</p>
-                    <p>Color: Red</p>
-                    <p>Size: Xl</p>
-                    <p>Quantity: 2</p>
-                    <img src="./img/main/close.svg" alt="close" width="18" height="18">
-                </li>
-                <li>
-                    <img src="./img/products/product-2.jpg" alt="product-2" width="262" height="360">
-                    <h2>mango people t-shirt</h2>
-                    <p>Price: $300</p>
-                    <p>Color: Red</p>
-                    <p>Size: Xl</p>
-                    <p>Quantity: 2</p>
-                    <img src="./img/main/close.svg" alt="close" width="18" height="18">
-                </li>
-            </ul>
-            <button type="button">clear shopping cart</button>
-            <button type="button">continue shopping</button>
-        </div>
-        <div>
-            <div>
-                <h2>shipping adress</h2>
-                <form action=""></form>
+        <div class="title-wrapper">
+            <div class="container">
+                <h1>shopping cart</h1>
             </div>
-            <div>
-                <div>
-                    <p>sub total $900</p>
-                    <p>grand total $900</p>
+        </div>
+        <section class="cart container">
+            <div class="cart__products">
+                <ul class="cart__list">
+                    <li class="cart__product">
+                        <img class="cart__product-img" src="./img/products/product-1.jpg" alt="product-1" width="262"
+                            height="306">
+                        <div class="cart__product-text">
+                            <h2 class="cart__product-heading">mango people t&#8209;shirt</h2>
+                            <p class="cart__product-price">Price: <span class=" cart__product-number">$300</span></p>
+                            <p class="cart__product-color">Color: Red</p>
+                            <p class="cart__product-size">Size: Xl</p>
+                            <p class="cart__product-quantity">Quantity: <span class="cart__product-qnumb">2</span></p>
+                        </div>
+                        <img class="cart__product-close" src="./img/main/close.svg" alt="close" width="18" height="18">
+                    </li>
+                    <li class="cart__product">
+                        <img src="./img/products/product-2.jpg" alt="product-2" width="262" height="306">
+                        <div class="cart__product-text">
+                            <h2 class="cart__product-heading">mango people t&#8209;shirt</h2>
+                            <p class="cart__product-price">Price: <span class=" cart__product-number">$300</span></p>
+                            <p class="cart__product-color">Color: Red</p>
+                            <p class="cart__product-size">Size: Xl</p>
+                            <p class="cart__product-quantity">Quantity: <span class="cart__product-qnumb">2</span></p>
+                        </div>
+                        <img class="cart__product-close" src="./img/main/close.svg" alt="close" width="18" height="18">
+                    </li>
+                </ul>
+                <div class="cart__products-buttons">
+                    <a class="cart__products-button" href="#">clear shopping cart</a>
+                    <a class="cart__products-button" href="#">continue shopping</a>
                 </div>
-                <button type="button">proceed to checkout</button>
             </div>
-        </div>
+            <div class="cart__info">
+                <div class="cart__adress">
+                    <h2 class="cart__adress-heading">shipping adress</h2>
+                    <form class="cart__adress-form">
+                        <label class="cart__adress-label" for="city">City</label>
+                        <input class="cart__adress-input" type="text" id="city" placeholder="City">
+                        <label class="cart__adress-label" for="state">State</label>
+                        <input class="cart__adress-input" type="text" id="state" placeholder="State">
+                        <label class="cart__adress-label" for="postcode">Postcode / Zip</label>
+                        <input class="cart__adress-input" type="text" id="postcode" placeholder="Postcode / Zip">
+                        <button class="cart__adress-quote" type="button">Get a Quote</button>
+                    </form>
+                </div>
+                <div class="cart__proceed-wrapper">
+                    <div class="cart__proceed-numbers">
+                        <p class="cart__proceed-sub">sub total <span class="cart__proceed-sub-numb">$900</span></p>
+                        <p class="cart__proceed-grand">grand total <span class="cart__proceed-grand-numb">$900</span>
+                        </p>
+                    </div>
+                    <button class="cart__proceed" type="button">proceed to checkout</button>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">

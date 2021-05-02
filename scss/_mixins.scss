@@ -1,0 +1,9 @@
+@mixin r-b() {
+    border:1px solid red;
+}
+
+@mixin font($size: 14px, $weight: 300, $line-height: 17px) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line-height;
+}
