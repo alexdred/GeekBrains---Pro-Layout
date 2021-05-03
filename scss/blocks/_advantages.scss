@@ -1,6 +1,10 @@
 .advantages {
     background-color: $black-color;
 
+    @include desktop {
+        padding-bottom: 50px;
+    }
+
     &__list {
         display: flex;
         justify-content: space-between;
@@ -14,6 +18,13 @@
         color: #ffffff;
         margin: 100px 0;
         padding: 0 25px;
+        box-sizing: border-box;
+
+        @include desktop {
+            width: 60%;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
     }
 
     &__item-heading {

@@ -2,10 +2,25 @@
     display: flex;
     background-color: $light-pink-color;
 
+    @include desktop {
+        width: 100%;
+    }
+
     &__image {
         width: 50%;
         display: flex;
         justify-content: flex-end;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__image img {
+        @include desktop {
+            width: 100%;
+            height: auto;
+        }
     }
 
     &__heading-wrapper {
@@ -13,6 +28,11 @@
         padding: 0 0 0 92px;
         display: flex;
         align-items: center;
+
+        @include tablet {
+            width: 100%;
+            min-height: 360px;
+        }
     }
 
     &__heading {
@@ -21,6 +41,11 @@
         line-height: 58px;
         text-transform: uppercase;
         position: relative;
+
+        @include tablet {
+            font-size: 37px;
+            margin: 0 auto;
+        }
     }
 
     &__heading:before {
@@ -38,6 +63,10 @@
         font-size: 37px;
         line-height: 44px;
         display: block;
+
+        @include desktop {
+            font-size: 24px;
+        }
     }
 
     &__heading-pink {

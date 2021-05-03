@@ -9,11 +9,19 @@
         display: flex;
         padding-top: 86px;
         padding-bottom: 130px;
+
+        @include tablet {
+            flex-direction: column;
+        }
     }
 
     &__content {
         text-align: center;
         width: 50%;
+
+        @include tablet {
+            width: 100%;
+        }
     }
 
     &__testemonial {
@@ -24,6 +32,12 @@
         width: 350px;
         margin: 0 auto;
         margin-top:30px;
+
+        @include tablet {
+            width: 100%;
+            padding: 0 8%;
+            box-sizing: border-box;
+        }
     }
 
     &__subscribe {
@@ -31,6 +45,11 @@
         font-size: 24px;
         text-transform: uppercase;
         margin-top: 50px;
+        margin-bottom: 15px;
+
+        @include tablet {
+            margin-top: 100px;
+        }
     }
 
     &__subscribe-text {
@@ -49,6 +68,10 @@
         border: none;
         background-color: rgb(228, 228, 228);
         border-radius: 30px 0 0px 30px;
+
+        @include tablet {
+            width: 30%;
+        }
     }
 
     &__form-email:focus,
@@ -79,6 +102,10 @@
         color:white;
         align-items: center;
         padding:20px 0;
+
+        @include tablet {
+            flex-direction: column-reverse;
+        }
     }
 
     &__bottom-text {
@@ -90,6 +117,11 @@
     &__bottom-list {
         display: flex;
         margin: 0;
+
+        @include tablet {
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
     }
 
     &__bottom-link {

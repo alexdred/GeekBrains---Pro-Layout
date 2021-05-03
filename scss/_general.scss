@@ -15,12 +15,22 @@ body {
 }
 
 .container {
-    width: 1140;
+    width: 1140px;
     margin: 0 auto;
+
+    @include desktop {
+        width: 100%;
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
 }
 
 .title-wrapper{
     background-color: $light-pink-color;
+
+    @include tablet {
+        text-align: center;
+    }
 }
 
 .title-wrapper h1 {

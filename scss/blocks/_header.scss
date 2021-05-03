@@ -14,10 +14,17 @@
         position: absolute;
         right: 0;
         background-color: #ffffff;
-        margin-top:23px;
+        margin-top:21px;
         min-width: 232px;
         min-height: 764px;
         padding: 0 34px 0 34px;
+        z-index: 1;
+
+        @include tablet {
+            width: 100%;
+            left: 0;
+            box-sizing: border-box;
+        }
     }
 
     &__navigation-close {
@@ -33,6 +40,40 @@
         font-weight: 900;
         color: $black-color;
         text-transform: uppercase;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        min-height: 75px;
+        align-items: center;
+
+        @include desktop {
+            padding: 0 32px;
+        }
+    }
+
+    &__logo {
+        margin: 0 41px 0 0px;
+    }
+
+    &__menu-button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    &__menu-button:focus,
+    &__menu-button:active {
+        outline: none;
+    }
+
+    &__link {
+        margin: 0 0 0 33px;
+
+        @include tablet {
+            display: none;
+        }
     }
 
     .navigation-item {
@@ -59,31 +100,5 @@
             margin: 0px 0 11px 20px;
         }
 
-    }
-
-    &__wrapper {
-        display: flex;
-        justify-content: space-between;
-        min-height: 75px;
-        align-items: center;
-    }
-
-    &__logo {
-        margin: 0 41px 0 0px;
-    }
-
-    &__menu-button {
-        border: none;
-        background-color: transparent;
-        cursor: pointer;
-    }
-
-    &__menu-button:focus,
-    &__menu-button:active {
-        outline: none;
-    }
-
-    &__link {
-        margin: 0 0 0 33px;
     }
 }

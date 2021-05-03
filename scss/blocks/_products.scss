@@ -2,6 +2,10 @@
     padding: 48px 0 96px 0;
     text-align: center;
 
+    @include desktop {
+        padding: 48px 16px 96px 16px;
+    }
+
     &__heading {
         color: $black-color;
         font-size: 30px;
@@ -29,6 +33,20 @@
         background-color: #f8f8f8;
         margin-bottom: 30px;
         text-align: left;
+        padding-bottom: 20px;
+
+        @include desktop {
+            width: 49%;
+        }
+
+        @include tablet {
+            width: 100%;
+        }
+    }
+
+    &__item-image {
+        width: 100%;
+        height: auto;
     }
 
     &__item-heading {
