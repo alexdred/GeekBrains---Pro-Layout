@@ -1,10 +1,18 @@
 .stocks {
     padding: 65px 0 48px 0;
 
+    @include desktop {
+        padding: 18px 16px 48px 16px;
+    }
+
     &__list {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+
+        @include desktop {
+            width: 100%;
+        }
     }
 
     &__item {
@@ -15,6 +23,15 @@
         align-items: center;
         flex-direction: column;
         text-transform: uppercase;
+
+        @include desktop {
+            width: 32%;
+        }
+
+        @include tablet {
+            width: 100%;
+            margin-top: 18px;
+        }
     }
 
     &__item-text {
@@ -36,20 +53,31 @@
 
     &__item_woman {
         background-image: url(../img/stocks/stocks-1.jpg);
+        background-position: center center;
+        background-size: cover;
     }
 
     &__item_man {
         background-image: url(../img/stocks/stocks-2.jpg);
+        background-position: center center;
+        background-size: cover;
     }
 
     &__item_kids {
         background-image: url(../img/stocks/stocks-3.jpg);
+        background-position: center center;
+        background-size: cover;
     }
 
     &__item_accesories {
         width: 100%;
         background-image: url(../img/stocks/stocks-4.jpg);
+        background-position: center center;
         margin-top:30px;
         min-height: 180px;
+
+        @include desktop {
+            margin-top:18px;
+        }
     }
 }

@@ -4,14 +4,35 @@
         display: flex;
         margin-top: 64px;
         margin-bottom: 96px;
+
+        @include tablet {
+            flex-direction: column;
+        }
     }
 
     &__left {
         width: 45%;
+   
+        @include desktop {
+            width: 50%;
+        }
+
+        @include tablet {
+            width: 100%;
+            margin-bottom: 50px;
+        }
     }
 
     &__right {
         width: 55%;
+
+        @include desktop {
+            width: 50%;
+        }
+
+        @include tablet {
+            width: 100%;
+        }
     }
 
     &__right-heading {
@@ -26,6 +47,10 @@
         font-weight: 300;
         font-size: 24px;
         line-height: 29px;
+    }
+
+    &__right-list {
+        margin-top: 20px;
     }
 
     &__right-perk {
@@ -54,6 +79,11 @@
         border: 1px solid $light-gray-color;
         width: 80%;
         outline: none;
+
+        @include tablet {
+            width: 100%;
+            box-sizing: border-box;
+        }
     }
 
     &__input:focus,
