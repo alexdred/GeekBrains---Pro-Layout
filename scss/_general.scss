@@ -39,4 +39,14 @@ body {
     font-size: 24px;
     font-weight: 400;
     padding:60px 0;
+    display: inline-block;
+}
+
+.title-with-bread {
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    padding-left: 0;
 }
