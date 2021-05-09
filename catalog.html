@@ -8,6 +8,10 @@
     <title>Catalog</title>
     <link rel="stylesheet" href="css/init.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -23,9 +27,9 @@
             <div>
                 <button class="header__menu-button header__opacity" type="button"><img src="./img/main/burger.svg"
                         alt="burger" width="32" height="23"></button>
-                <a href="#" class="header__opacity"><img class="header__link" src="./img/main/cart.svg" alt="cart"
+                <a href="cart.html" class="header__opacity"><img class="header__link" src="./img/main/cart.svg" alt="cart"
                         width="32" height="29"></a>
-                <a href="#" class="header__opacity"><img class="header__link" src="./img/main/account.svg" alt="account"
+                <a href="registration.html" class="header__opacity"><img class="header__link" src="./img/main/account.svg" alt="account"
                         width="32" height="29"></a>
                 <nav class="header__navigation">
                     <a class="header__navigation-close" href="#"><img src="./img/main/close.svg" alt="close"></a>
@@ -69,60 +73,54 @@
 
     <main>
         <section>
-            <h1>new arrivals</h1>
-            <nav>
-                <ul>
-                    <li>home</li>
-                    <li>men</li>
-                    <li>new arrivals</li>
-                </ul>
-            </nav>
+            <div class="title-wrapper">
+                <div class="container title-with-bread">
+                    <h1>new arrivals</h1>
+                    <nav class="breadcrumbs">
+                        <ul class="breadcrumbs__list">
+                            <li><a href="#">home</a></li>
+                            <li><a href="#">men</a></li>
+                            <li class="breadcrumbs__active"><a href="#">new arrivals</a></li>
+                        </ul>
+                    </nav>
+                </div>                
+            </div>
         </section>
-        <section>
-            <h2>products</h2>
+        <section class="products container">
+            <h2 class="visually-hidden">products</h2>
 
-            <nav>
-                <h2>filter</h2>
-                <img src="./img/catalog/filter.svg" alt="filter" width="15" height="10">
-                <ul>
-                    <li>category
-                        <ul>
-                            <li>Accessories</li>
-                            <li>Bags</li>
-                            <li>Denim</li>
-                            <li>Hoodies & Sweatshirts</li>
-                            <li>Jackets & Coats</li>
-                            <li>Polos</li>
-                            <li>Shirts</li>
-                            <li>Shoes</li>
-                            <li>Sweaters & Knits</li>
-                            <li>T-Shirts</li>
-                            <li>Tanks</li>
-                        </ul>
-                    </li>
-                    <li>brand
-                        <ul>
-                            <li>Accessories</li>
-                            <li>Jackets & Coats</li>
-                            <li>Polos</li>
-                            <li>T-Shirts</li>
-                            <li>Shirts</li>
-                        </ul>
-                    </li>
-                    <li>designer
-                        <ul>
-                            <li>Accessories</li>
-                            <li>Jackets & Coats</li>
-                            <li>Polos</li>
-                            <li>T-Shirts</li>
-                            <li>Shirts</li>
-                            <li>Bags</li>
+            <div class="products__filters">
+                <ul class="products__filters-filter">
+                    <li class="products__filters-filter-title">
+                        <span class="products__filter">filter</span> <svg class="products__filter-img" width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.833333 10H4.16667C4.625 10 5 9.625 5 9.16667C5 8.70833 4.625 8.33333 4.16667 8.33333H0.833333C0.375 8.33333 0 8.70833 0 9.16667C0 9.625 0.375 10 0.833333 10ZM0 0.833333C0 1.29167 0.375 1.66667 0.833333 1.66667H14.1667C14.625 1.66667 15 1.29167 15 0.833333C15 0.375 14.625 0 14.1667 0H0.833333C0.375 0 0 0.375 0 0.833333ZM0.833333 5.83333H9.16667C9.625 5.83333 10 5.45833 10 5C10 4.54167 9.625 4.16667 9.16667 4.16667H0.833333C0.375 4.16667 0 4.54167 0 5C0 5.45833 0.375 5.83333 0.833333 5.83333Z" fill="#000000"/>
+                            </svg>
+                        <ul class="products__filters-filter-list products__filters-category">
+                            <li class="products__filters-filter-subtitle"><span class="products__filters-filter-category">category</span>
+                                <ul class="products__filters-filter-sublist">
+                                    <li>Accessories</li>
+                                    <li>Bags</li>
+                                    <li>Denim</li>
+                                    <li>Hoodies & Sweatshirts</li>
+                                    <li>Jackets & Coats</li>
+                                    <li>Polos</li>
+                                    <li>Shirts</li>
+                                    <li>Shoes</li>
+                                    <li>Sweaters & Knits</li>
+                                    <li>T-Shirts</li>
+                                    <li>Tanks</li>
+                                </ul>
+                            </li>
+                            <li class="products__filters-filter-subtitle"><span class="products__filters-filter-category">brand</span>
+                            </li>
+                            <li class="products__filters-filter-subtitle"><span class="products__filters-filter-category">designer</span>
+                            </li>
                         </ul>
                     </li>
                 </ul>
-                <ul>
-                    <li>trending now
-                        <ul>
+                <ul class="products__filters-centered">
+                    <li class="products__filters-centered-title">trending now <i class="fas fa-chevron-down"></i>
+                        <ul class="products__filters-centered-list">
                             <li>Accessories</li>
                             <li>Bags</li>
                             <li>Denim</li>
@@ -136,16 +134,16 @@
                             <li>Tanks</li>
                         </ul>
                     </li>
-                    <li>size
-                        <ul>
+                    <li class="products__filters-centered-title">size <i class="fas fa-chevron-down"></i>
+                        <ul class="products__filters-centered-list">
                             <li>XS</li>
                             <li>S</li>
                             <li>M</li>
                             <li>L</li>
                         </ul>
                     </li>
-                    <li>price
-                        <ul>
+                    <li class="products__filters-centered-title">price <i class="fas fa-chevron-down"></i>
+                        <ul class="products__filters-centered-list">
                             <li>Accessories</li>
                             <li>Jackets & Coats</li>
                             <li>Polos</li>
@@ -155,7 +153,7 @@
                         </ul>
                     </li>
                 </ul>
-            </nav>
+            </div>
             <ul class="products__list">
                 <li class="products__item">
                     <div class="products__item-wrap">
@@ -165,7 +163,7 @@
                             <img class="products__item-button-img" src="./img/main/cart.svg" alt="cart" width="26"
                                 height="24">Add to Cart</button>
                     </div>
-                    <h3 class="products__item-heading">ellery x m'o capsule</h3>
+                    <h3 class="products__item-heading"><a href="product.html">ellery x m'o capsule</a></h3>
                     <p class="products__item-text">Known for her sculptural takes on traditional tailoring, Australian
                         arbiter of cool Kym Ellery
                         teams up with Moda Operandi.</p>
@@ -181,7 +179,7 @@
                             Add to Cart
                         </button>
                     </div>
-                    <h3 class="products__item-heading">ellery x m'o capsule</h3>
+                    <h3 class="products__item-heading"><a href="product.html">ellery x m'o capsule</a></h3>
                     <p class="products__item-text">Known for her sculptural takes on traditional tailoring, Australian
                         arbiter of cool Kym Ellery
                         teams up with Moda Operandi.</p>
@@ -197,7 +195,7 @@
                             Add to Cart
                         </button>
                     </div>
-                    <h3 class="products__item-heading">ellery x m'o capsule</h3>
+                    <h3 class="products__item-heading"><a href="product.html">ellery x m'o capsule</a></h3>
                     <p class="products__item-text">Known for her sculptural takes on traditional tailoring, Australian
                         arbiter of cool Kym Ellery
                         teams up with Moda Operandi.</p>
@@ -213,7 +211,7 @@
                             Add to Cart
                         </button>
                     </div>
-                    <h3 class="products__item-heading">ellery x m'o capsule</h3>
+                    <h3 class="products__item-heading"><a href="product.html">ellery x m'o capsule</a></h3>
                     <p class="products__item-text">Known for her sculptural takes on traditional tailoring, Australian
                         arbiter of cool Kym Ellery
                         teams up with Moda Operandi.</p>
@@ -229,7 +227,7 @@
                             Add to Cart
                         </button>
                     </div>
-                    <h3 class="products__item-heading">ellery x m'o capsule</h3>
+                    <h3 class="products__item-heading"><a href="product.html">ellery x m'o capsule</a></h3>
                     <p class="products__item-text">Known for her sculptural takes on traditional tailoring, Australian
                         arbiter of cool Kym Ellery
                         teams up with Moda Operandi.</p>
@@ -245,7 +243,7 @@
                             Add to Cart
                         </button>
                     </div>
-                    <h3 class="products__item-heading">ellery x m'o capsule</h3>
+                    <h3 class="products__item-heading"><a href="product.html">ellery x m'o capsule</a></h3>
                     <p class="products__item-text">Known for her sculptural takes on traditional tailoring, Australian
                         arbiter of cool Kym Ellery
                         teams up with Moda Operandi.</p>
@@ -261,7 +259,7 @@
                             Add to Cart
                         </button>
                     </div>
-                    <h3 class="products__item-heading">ellery x m'o capsule</h3>
+                    <h3 class="products__item-heading"><a href="product.html">ellery x m'o capsule</a></h3>
                     <p class="products__item-text">Known for her sculptural takes on traditional tailoring, Australian
                         arbiter of cool Kym Ellery
                         teams up with Moda Operandi.</p>
@@ -277,7 +275,7 @@
                             Add to Cart
                         </button>
                     </div>
-                    <h3 class="products__item-heading">ellery x m'o capsule</h3>
+                    <h3 class="products__item-heading"><a href="product.html">ellery x m'o capsule</a></h3>
                     <p class="products__item-text">Known for her sculptural takes on traditional tailoring, Australian
                         arbiter of cool Kym Ellery
                         teams up with Moda Operandi.</p>
@@ -293,41 +291,63 @@
                             Add to Cart
                         </button>
                     </div>
-                    <h3 class="products__item-heading">ellery x m'o capsule</h3>
+                    <h3 class="products__item-heading"><a href="product.html">ellery x m'o capsule</a></h3>
                     <p class="products__item-text">Known for her sculptural takes on traditional tailoring, Australian
                         arbiter of cool Kym Ellery
                         teams up with Moda Operandi.</p>
                     <p class="products__item-price">$52.00</p>
                 </li>
             </ul>
-            <nav>123456.....20</nav>
+            <nav class="products__page-nav">
+                <a href=""><</a>
+                <a class="products__page-nav_active" href="">1</a>
+                <a href="">2</a>
+                <a href="">3</a>
+                <a href="">4</a>
+                <a href="">5</a>
+                <a href="">6</a>
+                <a href="">...</a>
+                <a href="">20</a>
+                <a href="">></a>
+            </nav>
         </section>
 
-        <section>
-            <h2>advantages</h2>
-            <ul>
-                <li>
-                    <img src="./img/main/advantages-1.svg" alt="advantages-1" width="45" height="32">
-                    <h3>Free Delivery</h3>
-                    <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive
-                        models.
-                    </p>
-                </li>
-                <li>
-                    <img src="./img/main/advantages-2.svg" alt="advantages-2" width="40" height="40">
-                    <h3>Sales & discounts</h3>
-                    <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive
-                        models.
-                    </p>
-                </li>
-                <li>
-                    <img src="./img/main/advantages-3.svg" alt="advantages-3" width="47" height="35">
-                    <h3>Quality assurance</h3>
-                    <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive
-                        models.
-                    </p>
-                </li>
-            </ul>
+        <section class="advantages">
+            <div class="container">
+                <h2 class="visually-hidden">advantages</h2>
+                <ul class="advantages__list">
+                    <li class="advantages__item">
+                        <img class="advantages__image" src="./img/main/advantages-1.svg" alt="advantages-1" width="45"
+                            height="32">
+                        <h3 class="advantages__item-heading">Free Delivery</h3>
+                        <p class="advantages__item-text">Worldwide delivery on all. Authorit tively morph
+                            next-generation
+                            innov tion with extensive
+                            models.
+                        </p>
+                    </li>
+                    <li class="advantages__item">
+                        <img class="advantages__image" src="./img/main/advantages-2.svg" alt="advantages-2" width="40"
+                            height="40">
+                        <h3 class="advantages__item-heading">Sales & discounts</h3>
+                        <p class="advantages__item-text">Worldwide delivery on all. Authorit tively morph
+                            next-generation
+                            innov tion with extensive
+                            models.
+                        </p>
+                    </li>
+                    <li class="advantages__item">
+                        <img class="advantages__image" src="./img/main/advantages-3.svg" alt="advantages-3" width="47"
+                            height="35">
+                        <h3 class="advantages__item-heading">Quality assurance</h3>
+                        <p class="advantages__item-text">Worldwide delivery on all. Authorit tively morph
+                            next-generation
+                            innov tion with extensive
+                            models.
+                        </p>
+                    </li>
+                </ul>
+            </div>
         </section>
 
     </main>
