@@ -69,44 +69,87 @@
 
     <main>
         <section>
-            <h1>new arrivals</h1>
-            <nav>
-                <ul>
-                    <li>home</li>
-                    <li>men</li>
-                    <li>new arrivals</li>
-                </ul>
-            </nav>
+            <h2 class="visually-hidden">title</h2>
+            <div class="title-wrapper">
+                <div class="container title-with-bread">
+                    <h1>new arrivals</h1>
+                    <nav class="breadcrumbs">
+                        <ul class="breadcrumbs__list">
+                            <li><a href="#">home</a></li>
+                            <li><a href="#">men</a></li>
+                            <li class="breadcrumbs__active"><a href="#">new arrivals</a></li>
+                        </ul>
+                    </nav>
+                </div>                
+            </div>
         </section>
 
-        <section>
-            <h2>product</h2>
-            <div>
-                <div><img src="./img/main/arrow.svg" alt="arrow" width="12" height="21"></div>
-                <div><img src="./img/main/arrow.svg" alt="arrow" width="12" height="21"></div>
-                <div><img src="./img/product/product.jpg" alt="product" width="597" height="724"></div>
+        <section  class="product-page">
+            <h2 class="visually-hidden">product</h2>
+            <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active product-page__carousel-item">
+                    <img src="./img/product/product.jpg" alt="product" width="597" height="777">
+                    </div>
+                    <div class="carousel-item product-page__carousel-item">
+                    <img src="./img/product/product.jpg" alt="product" width="597" height="777">
+                    </div>
+                    <div class="carousel-item product-page__carousel-item">
+                    <img src="./img/product/product.jpg" alt="product" width="597" height="777">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-            <div>
-                <p>women collection</p>
-                <h2>moschino cheap and chic</h2>
-                <p>Compellingly actualize fully researched processes before proactive outsourcing. Progressively
+            <div class="container product-page__description">
+                <p class="product-page__category">women collection</p>
+                <div class="product-page__line"></div>
+                <h2 class="product-page__title">moschino cheap and chic</h2>
+                <p class="product-page__text">Compellingly actualize fully researched processes before proactive outsourcing. Progressively
                     syndicate collaborative architectures before cutting-edge services. Completely visualize parallel
                     core competencies rather than exceptional portals. </p>
-                <p>$561</p>
-                <ul>
-                    <li>choose color</li>
-                    <li>choose size</li>
-                    <li>quantity</li>
+                <p class="product-page__price">$561</p>
+                <ul class="products__filters-centered product-page__filters">
+                    <li class="products__filters-centered-title">choose color <i class="fas fa-chevron-down"></i>
+                        <ul class="products__filters-centered-list">
+                            <li>White</li>
+                            <li>Black</li>
+                            <li>Yellow</li>
+                        </ul>
+                    </li>
+                    <li class="products__filters-centered-title">choose size <i class="fas fa-chevron-down"></i>
+                        <ul class="products__filters-centered-list">
+                            <li>XS</li>
+                            <li>S</li>
+                            <li>M</li>
+                            <li>L</li>
+                        </ul>
+                    </li>
+                    <li class="products__filters-centered-title">quantity <i class="fas fa-chevron-down"></i>
+                        <ul class="products__filters-centered-list">
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                        </ul>
+                    </li>
                 </ul>
-                <button type="button">
+                <button class="product-page__item-button" type="button">
                     <img src="./img/product/product-cart.svg" alt="cart" width="26" height="24">
                     <p>Add to Cart</p>
                 </button>
             </div>
         </section>
 
-        <section>
-            <h2>similar products</h2>
+        <section class="container">
+            <h2 class="visually-hidden">similar products</h2>
             <ul class="products__list">
                 <li class="products__item">
                     <div class="products__item-wrap">
@@ -116,7 +159,7 @@
                             <img class="products__item-button-img" src="./img/main/cart.svg" alt="cart" width="26"
                                 height="24">Add to Cart</button>
                     </div>
-                    <h3 class="products__item-heading">ellery x m'o capsule</h3>
+                    <h3 class="products__item-heading"><a href="product.html">ellery x m'o capsule</a></h3>
                     <p class="products__item-text">Known for her sculptural takes on traditional tailoring, Australian
                         arbiter of cool Kym Ellery
                         teams up with Moda Operandi.</p>
@@ -132,7 +175,7 @@
                             Add to Cart
                         </button>
                     </div>
-                    <h3 class="products__item-heading">ellery x m'o capsule</h3>
+                    <h3 class="products__item-heading"><a href="product.html">ellery x m'o capsule</a></h3>
                     <p class="products__item-text">Known for her sculptural takes on traditional tailoring, Australian
                         arbiter of cool Kym Ellery
                         teams up with Moda Operandi.</p>
@@ -148,7 +191,7 @@
                             Add to Cart
                         </button>
                     </div>
-                    <h3 class="products__item-heading">ellery x m'o capsule</h3>
+                    <h3 class="products__item-heading"><a href="product.html">ellery x m'o capsule</a></h3>
                     <p class="products__item-text">Known for her sculptural takes on traditional tailoring, Australian
                         arbiter of cool Kym Ellery
                         teams up with Moda Operandi.</p>

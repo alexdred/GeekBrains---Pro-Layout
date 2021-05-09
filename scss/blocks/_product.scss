@@ -1,0 +1,105 @@
+.product-page {
+    &__carousel-item {
+        text-align: center;
+        background-color: #f7f7f7;
+        height: 777px;
+        border-top: 1px solid #e6e6e6;
+        border-bottom: 1px solid #e6e6e6;
+        z-index: 1;
+
+        @include tablet {
+            height: 500px;
+        }
+    }
+
+    &__carousel-item img {
+
+        @include tablet {
+            height: 500px;
+            width: auto;
+        }
+    }
+
+    &__description {
+        background-color: #ffffff;
+        border: 1px solid #e6e6e6;
+        margin-bottom: 128px;
+        margin-top: -65px;
+        z-index: 10;
+        position: relative;
+        box-sizing: border-box;
+        padding: 65px 250px;
+        text-align: center;
+
+        @include desktop {
+            padding: 65px 100px;
+        }
+
+        @include tablet {
+            padding: 65px 50px;
+        }
+    }
+
+    &__item-button {
+        display: flex;
+        z-index: 1;
+        border:1px solid white;
+        background-color: transparent;
+        color: $pink-color;
+        padding: 15px 40px;
+        border: 1px solid $pink-color;
+        margin: 0 auto;
+        transition: .2s;
+        margin-top: 48px;
+    }
+
+    &__item-button:hover {
+        background-color:$light-pink-color;
+    }
+
+    &__item-button p {
+        margin: 0;
+    }
+
+    &__item-button img {
+        margin-right: 20px;
+        margin-top: -5px;
+    }
+
+    &__category {
+        color: $pink-color;
+        text-transform: uppercase;
+    }
+
+    &__line {
+        width: 100px;
+        border: 2px solid $pink-color;
+        margin: 0 auto;
+        margin-bottom: 12px;
+    }
+
+    &__title {
+        @include font(18px, 300, 22px);
+        text-transform: uppercase;
+        margin-bottom: 48px;
+    }
+
+    &__text {
+        @include font(14px, 300, 17px);
+        margin-bottom: 65px;
+        padding: 0 30px;
+    }
+
+    &__price {
+        @include font(24px, 300, 29px);
+        color: $pink-color;
+        margin: 32px 0 65px 0;
+        padding-bottom: 65px;
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+    &__filters {
+        display: flex;
+        justify-content: center;
+    }
+}
