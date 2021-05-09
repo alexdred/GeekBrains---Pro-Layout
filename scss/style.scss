@@ -20,7 +20,6 @@ F. Product
 
 /* A. Global
 -----------------------------------------------------------*/
-
 @import './variables';
 @import './mixins';
 @import './reset';
@@ -28,47 +27,36 @@ F. Product
 
 /* B. Index
 -----------------------------------------------------------*/
-
 /* B.1 Header */
-
 @import './blocks/header';
 
 /* B.2 Brand */
-
 @import './blocks/brand';
 
 /* B.3 Stocks */
-
 @import './blocks/stocks';
 
 /* B.4 Productss */
-
 @import './blocks/products';
 
 /* B.5 Advantages */
-
 @import './blocks/advantages';
 
 /* B.6 Footer */
-
 @import './blocks/footer';
 
 /* C. Registration
 -----------------------------------------------------------*/
-
 @import './blocks/registration';
 
 /* D. Cart
 -----------------------------------------------------------*/
-
 @import './blocks/cart';
 
 /* E. Catalog
 -----------------------------------------------------------*/
-
 @import './blocks/catalog';
 
 /* F. Product
 -----------------------------------------------------------*/
-
 @import './blocks/product';
