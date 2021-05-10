@@ -1,18 +1,18 @@
 .products {
     padding: 48px 0 96px 0;
     text-align: center;
-
+    
     @include desktop {
         padding: 48px 16px 96px 16px;
     }
-
+    
     &__heading {
         color: $black-color;
         font-size: 30px;
         line-height: 36px;
         text-align: center;
     }
-
+    
     &__text {
         font-size: 14px;
         line-height: 17px;
@@ -20,35 +20,35 @@
         text-align: center;
         margin-bottom: 48px;
     }
-
+    
     &__list {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         padding: 0 0 15px 0;
     }
-
+    
     &__item {
         width: 360px;
         background-color: #f8f8f8;
         margin-bottom: 30px;
         text-align: left;
         padding-bottom: 20px;
-
+        
         @include desktop {
             width: 49%;
         }
-
+        
         @include tablet {
             width: 100%;
         }
     }
-
+    
     &__item-image {
         width: 100%;
         height: auto;
     }
-
+    
     &__item-heading {
         font-weight: 700;
         font-size: 13px;
@@ -58,16 +58,16 @@
         margin-bottom: 15px;
         padding: 0 18px;
     }
-
+    
     &__item-heading a {
         color: $black-color;
         text-decoration: none;
     }
-
+    
     &__item-heading a:hover {
         color: $pink-color;
     }
-
+    
     &__item-text {
         font-weight: 300;
         font-size: 14px;
@@ -76,7 +76,7 @@
         margin-bottom: 15px;
         padding: 0 18px;
     }   
-
+    
     &__item-price {
         font-size: 16px;
         font-weight: 400;
@@ -84,12 +84,12 @@
         color:$pink-color;
         padding: 0 18px;
     }
-
+    
     &__item-wrap {
         position: relative;
         margin-bottom: 25px;
     }
-
+    
     &__item-wrap:after {
         content:'';
         position: absolute;
@@ -102,7 +102,7 @@
         opacity: 0;
         transition: .3s;
     }
-
+    
     &__item-button {
         display: none;
         position: absolute;
@@ -115,19 +115,19 @@
         color: white;
         padding: 10px 15px;
     }
-
+    
     &__item-button-img {
         margin-right: 10px;
     }
-
+    
     &__item:hover &__item-wrap:after {
         opacity: 0.8;
     }
-
+    
     &__item:hover &__item-button {
         display: block;
     }
-
+    
     &__browse {
         font-size: 16px;
         font-weight: 400;
@@ -138,13 +138,13 @@
         text-decoration: none;
         transition: .3s;
     }
-
+    
     &__browse:hover {
         text-decoration: none;
         color: $black-color;
         border: 1px solid $black-color;
     }
-
+    
     &__filters {
         text-align: left;
         display: flex;
@@ -152,7 +152,7 @@
         z-index: 4;
         margin-bottom: 60px;
     }
-
+    
     &__filters-filter {
         position: absolute;
         @include font (14px, 400, 17px);
@@ -160,22 +160,22 @@
         padding: 7px 30px 20px 30px;
         min-width: 360px;
         cursor: pointer;
-
+        
         @include tablet {
             display: none;
         }
     }
-
+    
     &__filters_shadow {
         -moz-box-shadow: 5px 5px 10px #ccc;
         -webkit-box-shadow: 5px 5px 10px #ccc;
         box-shadow: 5px 5px 10px #ccc;
     }
-
+    
     &__filters-filter-list {
         display: none;
     }
-
+    
     &__filters-filter-category {
         display: block;
         border-left: 5px solid $pink-color;
@@ -184,54 +184,54 @@
         padding: 10px 0 10px 10px;
         width: 100%;
     }
-
+    
     &__filters li{
         margin-bottom: 10px;
     }
-
+    
     &__filters li ul{
         margin-top: 10px;
     }
-
+    
     &__filters-filter-title {
         text-transform: uppercase;
         font-weight: 700;
         transition: .2s;
     }
-
+    
     &__filter-img {
         fill: $pink-color;
         margin: -4px 0 0 5px;
     }
-
+    
     &__filters-filter-sublist {
         text-transform: none;
         font-weight: 400;
         padding: 30px 0;
     }
-
+    
     &__filters-category {
         padding-top: 15px;
     }
-
+    
     &__filters-centered {
         display: flex;
         margin: 0 auto;
         @include font (14px, 400, 17px);
     }
-
+    
     &__filters-centered-title {
         position: relative;
         padding: 0 25px 0 25px;
         text-transform: uppercase;
         cursor: pointer;
     }
-
+    
     &__filters-centered-title i{
         margin-left: 7px;
         padding: 10px 0;
     }
-
+    
     &__filters-centered-list {
         visibility: hidden;
         position: absolute;
@@ -244,21 +244,21 @@
         -webkit-box-shadow: 5px 5px 10px #ccc;
         box-shadow: 5px 5px 10px #ccc;
     }
-
+    
     &__filters-centered-list li{
         margin-bottom: 10px;
     }
-
+    
     &__filters-centered-title:hover > &__filters-centered-list{
         visibility: visible;
     }
-
+    
     &__page-nav {
         border: 1px solid #e0e0e0;
         display: inline-block;
         padding: 10px 20px;
     }
-
+    
     &__page-nav a{
         text-decoration: none;
         color: #979797;
@@ -266,13 +266,13 @@
         margin: 0 5px;
         transition: .2s;
     }
-
+    
     &__page-nav a:hover{
         color: #000000;
         font-weight: 700;
     }
-
-    &__page-nav_active{
+    
+    &__page-nav-active{
         color: #000000;
         font-weight: 700;
     }
