@@ -306,6 +306,7 @@ ul {
   align-items: center;
   flex-direction: column;
   text-transform: uppercase;
+  background-color: #cccccc;
 }
 
 @media (max-width: 1200px) {
