@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Layout - GeekBrains</title>
+    <link rel="stylesheet" href="../css/init.css">
+    <link rel="stylesheet" href="./burger.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <main>
+
+        <section class="products container">
+            <form action="#" id="hamburger__form">
+                <fieldset class="hamburger__fieldset-inside">
+                    <h4>Составь свой бургер</h4>
+                    <input type="radio" name="size" id="bigburger" value="Big" class="hamburger-input" data-price="100"
+                        data-calories="40" checked>
+                    <label for="bigburger">Большой (100 рублей, 40 калорий)</label> <br>
+                    <input type="radio" name="size" id="smallburger" value="Small" class="hamburger-input"
+                        data-price="50" data-calories="20">
+                    <label for="smallburger">Малый (50 рублей, 20 калорий)</label>
+                </fieldset>
+                <fieldset class="hamburger__fieldset-inside">
+                    <h4>Выберите начинку бургера:</h4>
+                    <input type="radio" name="add" id="cheese" value="Cheese" class="hamburger-input" data-price="10"
+                        data-calories="20" checked>
+                    <label for="cheese">Сыр (10 рублей, 20 калорий)</label> <br>
+                    <input type="radio" name="add" id="salad" value="Salad" class="hamburger-input" data-price="20"
+                        data-calories="5">
+                    <label for="salad">Cалат (20 рублей, 5 калорий)</label> <br>
+                    <input type="radio" name="add" id="potato" value="Potato" class="hamburger-input" data-price="15"
+                        data-calories="10">
+                    <label for="potato">Картофель (15 рублей, 10 калорий)</label> <br>
+                </fieldset>
+                <fieldset class="hamburger__fieldset-inside">
+                    <h4>Выберите доп опцию:</h4>
+                    <input type="checkbox" name="topings" id="seasoning" value="Spices" class="hamburger-input"
+                        data-price="15" data-calories="0">
+                    <label for="seasoning">Посыпать приправой (15 рублей, 0 калорий)</label> <br>
+                    <input type="checkbox" name="topings" id="mayonaise" value="Mayo" class="hamburger-input"
+                        data-price="20" data-calories="5">
+                    <label for="mayonaise">Полить майонезом (20 рублей, 5 калорий)</label>
+                </fieldset>
+                <div id="check">Собрать бургер</div>
+                <p>Итоговая стоимость: <span id="price">0</span> <br>
+                    Кол-во калорий: <span id="calories">0</span></p>
+            </form>
+        </section>
+
+        <section class="cars container">
+            <form action="#" id="cars__form">
+                <fieldset class="cars__fieldset-inside">
+                    <h4>Заказать машину</h4>
+                    <input type="radio" name="marka" id="bmw" value="Bmw" class="cars-input" data-price="10000"
+                        data-days="10" checked>
+                    <label for="bmw">BMW ($10000, 10 дней)</label> <br>
+                    <input type="radio" name="marka" id="toyota" value="bmw" class="cars-input" data-price="12000"
+                        data-days="11">
+                    <label for="toyota">Toyota ($12000, 11 дней)</label>
+                </fieldset>
+                <fieldset class="cars__fieldset-inside">
+                    <h4>Выберите тип:</h4>
+                    <input type="radio" name="tip" id="sedan" value="Sedan" class="cars-input" data-price="1000"
+                        data-days="13" checked>
+                    <label for="sedan">Седан ($1000, 13 дней)</label> <br>
+                    <input type="radio" name="tip" id="cross" value="Cross" class="cars-input" data-price="5000"
+                        data-days="14">
+                    <label for="cross">Кроссовер ($5000, 14 дней)</label> <br>
+                    <input type="radio" name="tip" id="universal" value="Universal" class="cars-input" data-price="3000"
+                        data-days="15">
+                    <label for="universal">Универсал ($3000, 15 дней)</label> <br>
+                </fieldset>
+                <fieldset class="cars__fieldset-inside">
+                    <h4>Выберите комплектацию:</h4>
+                    <input type="checkbox" name="complect" id="klimat" value="Klimat" class="cars-input"
+                        data-price="2000" data-days="16">
+                    <label for="klimat">Кондиционер ($2000, 16 дней)</label> <br>
+                    <input type="checkbox" name="complect" id="cruise" value="Cruise" class="cars-input"
+                        data-price="2500" data-days="17">
+                    <label for="cruise">Круизеонтроль ($2500, 17 дней)</label>
+                </fieldset>
+                <div id="car-check">Собрать машину</div>
+                <p>Итоговая стоимость: <span id="car-price">0</span> <br>
+                    Мшина будет готова через: <span id="car-days">0</span> дней</p>
+            </form>
+        </section>
+
+    </main>
+
+    <script src="../js/init.js"></script>
+    <script src="./js_pro_burger.js"></script>
+
+</body>
+
+</html>
