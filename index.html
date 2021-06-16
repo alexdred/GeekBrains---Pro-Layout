@@ -16,140 +16,146 @@
 
 <body>
 
-    <header class="header">
-        <div class="header__wrapper container">
-            <div>
-                <a href="#"><img class="header__logo" src="./img/main/logo.svg" alt="logo" width="44" height="38"></a>
-                <a href="#" class="header__opacity"><img class="header__loupe" src="./img/main/loupe.svg" alt="loupe"
-                        width="26" height="27"></a>
+    <div id="app">
+
+        <header class="header">
+            <div class="header__wrapper container">
+                <div>
+                    <a href="#"><img class="header__logo" src="./img/main/logo.svg" alt="logo" width="44"
+                            height="38"></a>
+                    <a href="#" class="header__opacity"><img class="header__loupe" src="./img/main/loupe.svg"
+                            alt="loupe" width="26" height="27"></a>
+                </div>
+                <div>
+                    <button class="header__menu-button header__opacity" type="button"><img src="./img/main/burger.svg"
+                            alt="burger" width="32" height="23"></button>
+                    <a href="#" class="header__opacity"><img class="header__link" src="./img/main/cart.svg" alt="cart"
+                            width="32" height="29" @click="showCart = !showCart"></a>
+
+                    <cart :cart-items="cartItems" :img="imgCart" :visibility="showCart" @remove="remove"></cart>
+                    <a href="registration.html" class="header__opacity"><img class="header__link"
+                            src="./img/main/account.svg" alt="account" width="32" height="29"></a>
+                    <nav class="header__navigation">
+                        <a class="header__navigation-close" href="#"><img src="./img/main/close.svg" alt="close"></a>
+                        <h2 class="header__navigation-title">menu</h2>
+                        <ul class="header__navigation-list">
+                            <li class="header__navigation-item navigation-item">
+                                <a class="navigation-item__link" href="#">men</a>
+                                <ul class="navigation-item__sublist">
+                                    <li><a class="navigation-item__sublist-link" href="#">Accessories</a></li>
+                                    <li><a class="navigation-item__sublist-link" href="#">Bags</a></li>
+                                    <li><a class="navigation-item__sublist-link" href="#">Denim</a></li>
+                                    <li><a class="navigation-item__sublist-link" href="#">T-Shirts</a></li>
+                                </ul>
+                            </li>
+                            <li class="header__navigation-item navigation-item">
+                                <a class="navigation-item__link" href="#">women</a>
+                                <ul class="navigation-item__sublist">
+                                    <li><a class="navigation-item__sublist-link" href="#">Accessories</a></li>
+                                    <li><a class="navigation-item__sublist-link" href="#">Jackets & Coats</a></li>
+                                    <li><a class="navigation-item__sublist-link" href="#">Polos</a></li>
+                                    <li><a class="navigation-item__sublist-link" href="#">T-Shirts</a></li>
+                                    <li><a class="navigation-item__sublist-link" href="#">Shirts</a></li>
+                                </ul>
+                            </li>
+                            <li class="header__navigation-item navigation-item">
+                                <a class="navigation-item__link" href="#">kids</a>
+                                <ul class="navigation-item__sublist">
+                                    <li><a class="navigation-item__sublist-link" href="#">Accessories</a></li>
+                                    <li><a class="navigation-item__sublist-link" href="#">Jackets & Coats</a></li>
+                                    <li><a class="navigation-item__sublist-link" href="#">Polos</a></li>
+                                    <li><a class="navigation-item__sublist-link" href="#">T-Shirts</a></li>
+                                    <li><a class="navigation-item__sublist-link" href="#">Shirts</a></li>
+                                    <li><a class="navigation-item__sublist-link" href="#">Bags</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
-            <div>
-                <button class="header__menu-button header__opacity" type="button"><img src="./img/main/burger.svg"
-                        alt="burger" width="32" height="23"></button>
-                <a href="cart.html" class="header__opacity"><img class="header__link" src="./img/main/cart.svg"
-                        alt="cart" width="32" height="29"></a>
-                <a href="registration.html" class="header__opacity"><img class="header__link"
-                        src="./img/main/account.svg" alt="account" width="32" height="29"></a>
-                <nav class="header__navigation">
-                    <a class="header__navigation-close" href="#"><img src="./img/main/close.svg" alt="close"></a>
-                    <h2 class="header__navigation-title">menu</h2>
-                    <ul class="header__navigation-list">
-                        <li class="header__navigation-item navigation-item">
-                            <a class="navigation-item__link" href="#">men</a>
-                            <ul class="navigation-item__sublist">
-                                <li><a class="navigation-item__sublist-link" href="#">Accessories</a></li>
-                                <li><a class="navigation-item__sublist-link" href="#">Bags</a></li>
-                                <li><a class="navigation-item__sublist-link" href="#">Denim</a></li>
-                                <li><a class="navigation-item__sublist-link" href="#">T-Shirts</a></li>
-                            </ul>
-                        </li>
-                        <li class="header__navigation-item navigation-item">
-                            <a class="navigation-item__link" href="#">women</a>
-                            <ul class="navigation-item__sublist">
-                                <li><a class="navigation-item__sublist-link" href="#">Accessories</a></li>
-                                <li><a class="navigation-item__sublist-link" href="#">Jackets & Coats</a></li>
-                                <li><a class="navigation-item__sublist-link" href="#">Polos</a></li>
-                                <li><a class="navigation-item__sublist-link" href="#">T-Shirts</a></li>
-                                <li><a class="navigation-item__sublist-link" href="#">Shirts</a></li>
-                            </ul>
-                        </li>
-                        <li class="header__navigation-item navigation-item">
-                            <a class="navigation-item__link" href="#">kids</a>
-                            <ul class="navigation-item__sublist">
-                                <li><a class="navigation-item__sublist-link" href="#">Accessories</a></li>
-                                <li><a class="navigation-item__sublist-link" href="#">Jackets & Coats</a></li>
-                                <li><a class="navigation-item__sublist-link" href="#">Polos</a></li>
-                                <li><a class="navigation-item__sublist-link" href="#">T-Shirts</a></li>
-                                <li><a class="navigation-item__sublist-link" href="#">Shirts</a></li>
-                                <li><a class="navigation-item__sublist-link" href="#">Bags</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
+        </header>
 
-    <main>
-        <section class="brand">
-            <div class="brand__image">
-                <img src="./img/main/brand-bg.png" alt="brand-bg" width="800" height="764">
-            </div>
-            <div class="brand__heading-wrapper">
-                <h1 class="brand__heading">the brand <span class="brand__heading-text">of luxerious <span
-                            class="brand__heading-pink">fashion</span></span></h1>
-            </div>
-        </section>
+        <main>
+            <section class="brand">
+                <div class="brand__image">
+                    <img src="./img/main/brand-bg.png" alt="brand-bg" width="800" height="764">
+                </div>
+                <div class="brand__heading-wrapper">
+                    <h1 class="brand__heading">the brand <span class="brand__heading-text">of luxerious <span
+                                class="brand__heading-pink">fashion</span></span></h1>
+                </div>
+            </section>
 
-        <section class="stocks container">
-            <h2 class="visually-hidden">stocks</h2>
-            <ul class="stocks__list">
-                <li class="stocks__item stocks__item_woman">
-                    <p class="stocks__item-text">30% off</p>
-                    <h3 class="stocks__item-header">for women</h3>
-                </li>
-                <li class="stocks__item stocks__item_man">
-                    <p class="stocks__item-text">hot deal</p>
-                    <h3 class="stocks__item-header">for men</h3>
-                </li>
-                <li class="stocks__item stocks__item_kids">
-                    <p class="stocks__item-text">new arrivals</p>
-                    <h3 class="stocks__item-header">for kids</h3>
-                </li>
-                <li class="stocks__item stocks__item_accesories">
-                    <p class="stocks__item-text">luxirous & trendy</p>
-                    <h3 class="stocks__item-header">accesories</h3>
-                </li>
-            </ul>
-        </section>
-
-        <section class="products container">
-            <h2 class="products__heading">Fetured Items</h2>
-            <p class="products__text">Shop for items based on what we featured in this week</p>
-            <ul class="products__list products__list-home">
-
-            </ul>
-            <a class="products__browse" href="catalog.html">Browse All Product</a>
-        </section>
-
-        <section class="advantages">
-            <div class="container">
-                <h2 class="visually-hidden">advantages</h2>
-                <ul class="advantages__list">
-                    <li class="advantages__item">
-                        <img class="advantages__image" src="./img/main/advantages-1.svg" alt="advantages-1" width="45"
-                            height="32">
-                        <h3 class="advantages__item-heading">Free Delivery</h3>
-                        <p class="advantages__item-text">Worldwide delivery on all. Authorit tively morph
-                            next-generation
-                            innov tion with extensive
-                            models.
-                        </p>
+            <section class="stocks container">
+                <h2 class="visually-hidden">stocks</h2>
+                <ul class="stocks__list">
+                    <li class="stocks__item stocks__item_woman">
+                        <p class="stocks__item-text">30% off</p>
+                        <h3 class="stocks__item-header">for women</h3>
                     </li>
-                    <li class="advantages__item">
-                        <img class="advantages__image" src="./img/main/advantages-2.svg" alt="advantages-2" width="40"
-                            height="40">
-                        <h3 class="advantages__item-heading">Sales & discounts</h3>
-                        <p class="advantages__item-text">Worldwide delivery on all. Authorit tively morph
-                            next-generation
-                            innov tion with extensive
-                            models.
-                        </p>
+                    <li class="stocks__item stocks__item_man">
+                        <p class="stocks__item-text">hot deal</p>
+                        <h3 class="stocks__item-header">for men</h3>
                     </li>
-                    <li class="advantages__item">
-                        <img class="advantages__image" src="./img/main/advantages-3.svg" alt="advantages-3" width="47"
-                            height="35">
-                        <h3 class="advantages__item-heading">Quality assurance</h3>
-                        <p class="advantages__item-text">Worldwide delivery on all. Authorit tively morph
-                            next-generation
-                            innov tion with extensive
-                            models.
-                        </p>
+                    <li class="stocks__item stocks__item_kids">
+                        <p class="stocks__item-text">new arrivals</p>
+                        <h3 class="stocks__item-header">for kids</h3>
+                    </li>
+                    <li class="stocks__item stocks__item_accesories">
+                        <p class="stocks__item-text">luxirous & trendy</p>
+                        <h3 class="stocks__item-header">accesories</h3>
                     </li>
                 </ul>
-            </div>
-        </section>
-    </main>
+            </section>
+
+            <section class="products container">
+                <h2 class="products__heading">Fetured Items</h2>
+                <p class="products__text">Shop for items based on what we featured in this week</p>
+
+                <products :products="filtered" :img="imgProduct" @add-product="addProduct"></products>
+
+                <a class="products__browse" href="catalog.html">Browse All Product</a>
+            </section>
+
+            <section class="advantages">
+                <div class="container">
+                    <h2 class="visually-hidden">advantages</h2>
+                    <ul class="advantages__list">
+                        <li class="advantages__item">
+                            <img class="advantages__image" src="./img/main/advantages-1.svg" alt="advantages-1"
+                                width="45" height="32">
+                            <h3 class="advantages__item-heading">Free Delivery</h3>
+                            <p class="advantages__item-text">Worldwide delivery on all. Authorit tively morph
+                                next-generation
+                                innov tion with extensive
+                                models.
+                            </p>
+                        </li>
+                        <li class="advantages__item">
+                            <img class="advantages__image" src="./img/main/advantages-2.svg" alt="advantages-2"
+                                width="40" height="40">
+                            <h3 class="advantages__item-heading">Sales & discounts</h3>
+                            <p class="advantages__item-text">Worldwide delivery on all. Authorit tively morph
+                                next-generation
+                                innov tion with extensive
+                                models.
+                            </p>
+                        </li>
+                        <li class="advantages__item">
+                            <img class="advantages__image" src="./img/main/advantages-3.svg" alt="advantages-3"
+                                width="47" height="35">
+                            <h3 class="advantages__item-heading">Quality assurance</h3>
+                            <p class="advantages__item-text">Worldwide delivery on all. Authorit tively morph
+                                next-generation
+                                innov tion with extensive
+                                models.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
 
     <footer class="footer">
         <div class="container footer__wrap">
@@ -186,6 +192,11 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/ProductComponent.js"></script>
+    <script src="js/CartComponent.js"></script>
+    <script src="js/Form.js"></script>
+    <script src="js/Error.js"></script>
     <script src="js/init.js"></script>
     <script src="js/main.js"></script>
 
