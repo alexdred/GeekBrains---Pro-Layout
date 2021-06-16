@@ -20,54 +20,78 @@ $('.products__filters-filter').mouseleave(function () {
     $('.products__filters-filter-list').css('display', 'none');
 });
 
-// products
-const products = [
-    { id: 1, title: "ellery x m'o capsule", price: 52, image: "product-1.jpg", description: "Known for her sculptural takes on traditional tailoring Australian arbiter of cool Kym Ellery teams up with Moda Operandi." },
-    { id: 2, title: "ellery x m'o capsule", price: 52, image: "product-2.jpg", description: "Known for her sculptural takes on traditional tailoring Australian arbiter of cool Kym Ellery teams up with Moda Operandi." },
-    { id: 3, title: "ellery x m'o capsule", price: 52, image: "product-3.jpg", description: "Known for her sculptural takes on traditional tailoring Australian arbiter of cool Kym Ellery teams up with Moda Operandi." },
-    { id: 4, title: "ellery x m'o capsule", price: 52, image: "product-4.jpg", description: "Known for her sculptural takes on traditional tailoring Australian arbiter of cool Kym Ellery teams up with Moda Operandi." },
-    { id: 5, title: "ellery x m'o capsule", price: 52, image: "product-5.jpg", description: "Known for her sculptural takes on traditional tailoring Australian arbiter of cool Kym Ellery teams up with Moda Operandi." },
-    { id: 6, title: "ellery x m'o capsule", price: 52, image: "product-6.jpg", description: "Known for her sculptural takes on traditional tailoring Australian arbiter of cool Kym Ellery teams up with Moda Operandi." },
-    { id: 7, title: "ellery x m'o capsule", price: 52, image: "product-7.jpg", description: "Known for her sculptural takes on traditional tailoring Australian arbiter of cool Kym Ellery teams up with Moda Operandi." },
-    { id: 8, title: "ellery x m'o capsule", price: 52, image: "product-8.jpg", description: "Known for her sculptural takes on traditional tailoring Australian arbiter of cool Kym Ellery teams up with Moda Operandi." },
-    { id: 9, title: "ellery x m'o capsule", price: 52, image: "product-9.jpg", description: "Known for her sculptural takes on traditional tailoring Australian arbiter of cool Kym Ellery teams up with Moda Operandi." },
-];
+const API = '../';
 
-const renderProduct = (product) => {
-    return `<li class="products__item">
-                <div class="products__item-wrap">
-                    <img class="products__item-image" src="./img/products/${product.image}" alt="${product.title}" width="360"
-                        height="420">
-                    <button class="products__item-button" type="button">
-                        <img class="products__item-button-img" src="./img/main/cart.svg" alt="cart" width="26"
-                            height="24">Add to Cart</button>
-                </div>
-                <h3 class="products__item-heading"><a href="product.html">${product.title}</a></h3>
-                <p class="products__item-text">${product.description}</p>
-                <p class="products__item-price">$${product.price}</p>
-            </li>`
-};
+const app = new Vue({
+    el: '#app',
+    data: {
+        userSearch: '',
+        showCart: false,
+        catalogUrl: 'getProducts.json',
+        cartUrl: 'addToBasket.json',
+        cartItems: [],
+        filtered: [],
+        imgCart: 'https://placehold.it/50x100',
+        products: [],
+        imgProduct: 'https://placehold.it/200x150',
+        error: false
+    },
+    methods: {
+        getJson(url) {
+            return fetch(url)
+                .then(result => result.json())
+                .catch(error => {
+                    console.log(error);
+                    error = true
+                })
+        },
+        addProduct(item) {
+            this.getJson(`${API}/addToBasket.json`)
+                .then(data => {
+                    if (data.result === 1) {
+                        let find = this.cartItems.find(el => el.id === item.id);
+                        if (find) {
+                            find.quantity++;
+                        } else {
+                            const prod = Object.assign({ quantity: 1 }, item);
+                            this.cartItems.push(prod)
+                        }
+                    }
+                })
+        },
+        remove(item) {
+            this.getJson(`${API}/addToBasket.json`)
+                .then(data => {
+                    if (data.result === 1) {
+                        if (item.quantity > 1) {
+                            item.quantity--;
+                        } else {
+                            this.cartItems.splice(this.cartItems.indexOf(item), 1);
+                        }
+                    }
 
-const renderPage = list => {
-    const productsList = list.map(item => renderProduct(item));
-    // home page - 6 products
-    if (document.querySelector('.products__list').classList.contains('products__list-home')) {
-        for (let i = 0; i < 6; i++) {
-            document.querySelector('.products__list-home').innerHTML += productsList[i];
+                })
+        },
+        filter() {
+            let regexp = new RegExp(this.userSearch, 'i');
+            this.filtered = this.products.filter(el => regexp.test(el.title));
         }
+    },
+    mounted() {
+        this.getJson(`${API + this.cartUrl}`)
+            .then(data => {
+                for (let item of data) {
+                    this.$data.cartItems.push(item);
+                }
+            });
+        this.getJson(`${API + this.catalogUrl}`)
+            .then(data => {
+                for (let item of data) {
+                    this.$data.products.push(item);
+                    this.$data.filtered.push(item);
+                }
+            });
     }
-    // catalog page - 9 products
-    if (document.querySelector('.products__list').classList.contains('products__list-catalog')) {
-        for (let i = 0; i < 9; i++) {
-            document.querySelector('.products__list-catalog').innerHTML += productsList[i];
-        }
-    }
-    // product page - 3 products
-    if (document.querySelector('.products__list').classList.contains('products__list-product')) {
-        for (let i = 0; i < 3; i++) {
-            document.querySelector('.products__list-product').innerHTML += productsList[i];
-        }
-    }
-};
 
-renderPage(products);
+});
+
